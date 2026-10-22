@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 11" fill="none">
+  <!-- Dynamic GTA-style graffiti underline stroke - Neon Green -->
+  <path d="M2 7.2C7 6.4 12 4.6 16 5.5C20.5 6.4 23.5 8.8 28 7.2C32.5 5.4 36.5 2.8 41 4.2C45.2 5.5 47 7 51 4.5" stroke="#00ff66" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M7 8.5C14.5 9.4 22 8.8 29 7.6C35.5 6.5 41.5 5.2 47.5 4.6" stroke="#00ff66" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
+</svg>
