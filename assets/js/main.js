@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', (e) => {
         const href = link.getAttribute('href') || '';
 
-        if (servidoresSec && (href === '#' || href === 'index.html' || href === '' || href.endsWith('/'))) {
+        if (servidoresSec && (href === '#' || href === 'index.html' || href === '../index.html' || href === '' || href.endsWith('/'))) {
           e.preventDefault();
           window.scrollTo({ top: 0, behavior: 'smooth' });
           desktopNavLinks.forEach(l => l.classList.remove('active'));

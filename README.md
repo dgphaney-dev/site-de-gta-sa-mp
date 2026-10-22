@@ -39,32 +39,22 @@ Plataforma web moderna, responsiva e de alta performance criada exclusivamente p
 
 ```text
 babilonia-rpg/
-├── index.html                 # Página principal (Landing page completa com Hero, Servidores e Carrossel)
-├── servidores.html            # Monitoramento detalhado de servidores, status e IPs
-├── sistemas.html              # Apresentação aprofundada dos sistemas exclusivos
-├── downloads.html             # Central de downloads Android (APK/Google Play) e PC com requisitos
-├── loja.html                  # Loja oficial com vitrine VIP e checkout Pix interativo
-├── regras.html                # Diretrizes e regras gerais da comunidade
-├── influenciadores.html       # Programa de criadores de conteúdo e parceiros
-├── faq.html                   # Perguntas frequentes com acordeão dinâmico
-├── suporte.html               # Central de ajuda, abertura de tickets e canal Discord
-├── preview.html               # Simulador de telas e resoluções
+├── index.html                 # Página inicial oficial (Landing page completa)
+├── pages/                     # Todas as páginas internas organizadas
+│   ├── servidores.html        # Monitoramento detalhado de servidores, status e IPs
+│   ├── sistemas.html          # Apresentação aprofundada dos sistemas exclusivos
+│   ├── downloads.html         # Central de downloads Android e PC com requisitos
+│   ├── loja.html              # Loja oficial com vitrine VIP e checkout Pix interativo
+│   ├── regras.html            # Diretrizes e regras gerais da comunidade
+│   ├── influenciadores.html   # Programa de criadores de conteúdo e parceiros
+│   ├── faq.html               # Perguntas frequentes com acordeão dinâmico
+│   └── suporte.html           # Central de ajuda, abertura de tickets e canal Discord
 ├── assets/
-│   ├── css/                   # Folhas de estilo modulares
-│   │   ├── variables.css      # Variáveis de design (cores neon, fontes, espaçamentos)
-│   │   ├── base.css           # Reset global, tipografia e scrollbar personalizada
-│   │   ├── components.css     # Cabeçalho fixo, botões, cards, bottom nav e drawer
-│   │   ├── landing.css        # Estilos específicos da página inicial
-│   │   ├── scroll-reveal.css  # Animações de entrada ao rolar a página
-│   │   └── ... (CSS de páginas específicas)
-│   ├── js/                    # Módulos JavaScript puramente front-end
-│   │   ├── main.js            # Inicializador global, drawer e ScrollSpy do header
-│   │   ├── servers.js         # Renderização dinâmica e cópia de IP dos servidores
-│   │   ├── systems-tabs.js    # Carrossel interativo de abas com autoplay
-│   │   ├── loja.js            # Modal interativo de checkout Pix Copia-e-Cola
-│   │   ├── toast.js           # Notificações visuais flutuantes
-│   │   └── ... (Scripts modulares)
-│   └── images/                # Artes oficiais, logos 3D e imagens em WebP/PNG
+│   ├── css/                   # Folhas de estilo modulares (variables, components, landing...)
+│   ├── js/                    # Módulos JavaScript puramente front-end (main, servers...)
+│   ├── images/                # Artes oficiais, logos 3D e texturas em WebP/PNG
+│   └── fonts/                 # Tipografias e fontes TTF
+├── .gitignore
 └── README.md                  # Documentação do projeto
 ```
 
