@@ -1,4 +1,4 @@
-# 🌐 Rede Babilônia RPG - Plataforma Web Oficial
+# Rede Babilônia RPG - Plataforma Web Oficial
 
 ![Badge](https://img.shields.io/badge/Tecnologia-100%25%20Front--End-00ff66?style=for-the-badge)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -8,11 +8,11 @@
 
 Plataforma web moderna, responsiva e de alta performance criada exclusivamente para a **Rede Babilônia RPG** (GTA SA:MP Multiplataforma Android & PC).
 
-> 💡 **Projeto 100% Front-End Estático**: Não requer servidor backend (Node.js, PHP, Python) nem banco de dados (MySQL, MongoDB). Todo o ecossistema roda diretamente no navegador do usuário com velocidade instantânea, máxima segurança e custo zero de infraestrutura.
+> **Projeto 100% Front-End Estático**: Não requer servidor backend (Node.js, PHP, Python) nem banco de dados (MySQL, MongoDB). Todo o ecossistema roda diretamente no navegador do usuário com velocidade instantânea, máxima segurança e custo zero de infraestrutura.
 
 ---
 
-## 🎮 Diferenciais e Recursos do Front-End
+## Diferenciais e Recursos do Front-End
 
 - **Arquitetura 100% Client-Side**: Páginas estáticas ultra-rápidas construídas com HTML5 semântico, CSS3 modular e JavaScript puro (Vanilla ES6+).
 - **Design System Gamer Dark & Verde Neon**:
@@ -35,7 +35,7 @@ Plataforma web moderna, responsiva e de alta performance criada exclusivamente p
 
 ---
 
-## 📂 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```text
 babilonia-rpg/
@@ -60,7 +60,7 @@ babilonia-rpg/
 
 ---
 
-## 🚀 Como Executar ou Hospedar
+## Como Executar ou Hospedar
 
 Por ser um projeto **100% Front-End estático**, você pode usá-lo de qualquer uma das formas abaixo:
 
@@ -77,6 +77,6 @@ Basta conectar o repositório do GitHub nessas plataformas e clicar em **Deploy*
 
 ---
 
-## 🛡️ Licença e Direitos
+## Licença e Direitos
 
 Projeto desenvolvido com exclusividade para a **Rede Babilônia RPG**. Todos os direitos reservados.
