@@ -1,0 +1,60 @@
+/**
+ * REDE BABILÔNIA RPG - VARIÁVEIS GLOBAIS DE DESIGN
+ * Paleta oficial: Dark Gamer & Verde Neon / Esmeralda
+ */
+
+:root {
+  /* Cores de Fundo (Escala Dark) */
+  --bg-primary: #08090a;
+  --bg-secondary: #0d120f;
+  --bg-card: #121814;
+  --bg-card-hover: #18221c;
+  --bg-surface: #1b261f;
+  --bg-surface-glass: rgba(18, 24, 20, 0.85);
+
+  /* Paleta Verde Neon & Esmeralda */
+  --green-neon: #00ff66;
+  --green-neon-glow: rgba(0, 255, 102, 0.35);
+  --green-neon-subtle: rgba(0, 255, 102, 0.12);
+  --green-primary: #10b981;
+  --green-dark: #064e3b;
+  --green-gradient: linear-gradient(135deg, #00ff66 0%, #059669 100%);
+  --green-gradient-hover: linear-gradient(135deg, #26ff7b 0%, #10b981 100%);
+  --green-card-glow: 0 8px 32px 0 rgba(0, 255, 102, 0.15);
+
+  /* Tipografia & Contrastes */
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --text-dark: #6b7280;
+  --text-inverse: #05140b;
+
+  /* Bordas e Linhas */
+  --border-subtle: #1c2620;
+  --border-highlight: rgba(0, 255, 102, 0.3);
+  --border-active: #00ff66;
+
+  /* Status */
+  --status-online: #00ff66;
+  --status-offline: #ef4444;
+  --status-busy: #f59e0b;
+
+  /* Tipografia */
+  --font-heading: 'Rajdhani', 'Montserrat', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-graffiti: 'Permanent Marker', 'Sedgwick Ave Display', cursive, sans-serif;
+
+  /* Espaçamentos e Bordas */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Transições */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Alturas e Layout */
+  --bottom-bar-height: 72px;
+  --header-height: 94px;
+  --max-width: 1200px;
+}

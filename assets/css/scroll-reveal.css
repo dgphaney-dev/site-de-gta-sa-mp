@@ -1,0 +1,134 @@
+/* Rede Babilônia RPG - Efeitos de Animação no Scroll & Hover (Estilo Cidade Alta) */
+
+/* --------------------------------------------------------------------------
+   1. ESTADOS INICIAIS DE REVEAL (Antes de entrar na tela)
+   -------------------------------------------------------------------------- */
+[data-reveal] {
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* Direções de entrada */
+[data-reveal="up"],
+[data-reveal=""] {
+  transform: translateY(40px);
+}
+
+[data-reveal="down"] {
+  transform: translateY(-40px);
+}
+
+[data-reveal="left"] {
+  transform: translateX(-50px);
+}
+
+[data-reveal="right"] {
+  transform: translateX(50px);
+}
+
+[data-reveal="scale"] {
+  transform: scale(0.92);
+}
+
+/* --------------------------------------------------------------------------
+   2. ESTADO VISÍVEL (Quando entra na tela ao rolar pra cima ou pra baixo)
+   -------------------------------------------------------------------------- */
+[data-reveal].in-view {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+/* Delays escalonados para efeito cascata */
+[data-delay="100"] { transition-delay: 0.1s; }
+[data-delay="200"] { transition-delay: 0.2s; }
+[data-delay="300"] { transition-delay: 0.3s; }
+[data-delay="400"] { transition-delay: 0.4s; }
+[data-delay="500"] { transition-delay: 0.5s; }
+
+/* --------------------------------------------------------------------------
+   3. HOVERS ESTILO CIDADE ALTA (Interações dinâmicas nos Cards e Botões)
+   -------------------------------------------------------------------------- */
+.server-card,
+.server-full-card,
+.system-detailed-card,
+.download-card,
+.download-hero-card,
+.step-box,
+.creator-card,
+.creator-full-card,
+.vip-card,
+.rule-card,
+.channel-card,
+.ticket-form-card,
+.partner-form-section,
+.faq-item,
+.faq-card-item {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease,
+              box-shadow 0.4s ease,
+              background-color 0.3s ease;
+  position: relative;
+}
+
+/* Hover de elevação e brilho neon nos cards */
+.server-card:hover,
+.server-full-card:hover,
+.system-detailed-card:hover,
+.download-card:hover,
+.download-hero-card:hover,
+.step-box:hover,
+.creator-card:hover,
+.creator-full-card:hover,
+.vip-card:hover,
+.rule-card:hover,
+.channel-card:hover,
+.ticket-form-card:hover,
+.partner-form-section:hover,
+.faq-card-item:hover {
+  transform: translateY(-8px) scale(1.015);
+  border-color: var(--green-neon);
+  box-shadow: 0 16px 35px rgba(0, 255, 102, 0.25), inset 0 0 15px rgba(0, 255, 102, 0.05);
+}
+
+/* Efeito de zoom suave no ícone interno no hover (estilo Cidade Alta) */
+.server-card:hover .status-dot,
+.server-full-card:hover .status-dot,
+.system-detailed-card:hover .system-icon-header svg,
+.download-card:hover .download-icon-badge svg,
+.download-hero-card:hover .meta-badge,
+.step-box:hover .step-number,
+.creator-card:hover .creator-avatar,
+.creator-full-card:hover .creator-big-avatar,
+.vip-card:hover .vip-price,
+.channel-card:hover .channel-icon-wrap svg,
+.faq-card-item:hover svg {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 10px var(--green-neon)) brightness(1.2);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+
+/* Botões com efeito de expansão e pulso luminoso no hover */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  transform: skewX(-25deg);
+  transition: 0.6s ease;
+  pointer-events: none;
+}
+
+.btn:hover::after {
+  left: 140%;
+}

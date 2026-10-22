@@ -1,0 +1,145 @@
+/* Rede Babilônia RPG - Estilos da Página Influenciadores */
+
+.creators-full-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin: 40px 0;
+}
+
+.creator-full-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all var(--transition-smooth);
+}
+
+.creator-full-card:hover {
+  border-color: var(--border-highlight);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 255, 102, 0.2);
+}
+
+.creator-big-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 2px solid var(--green-neon);
+  box-shadow: 0 0 20px var(--green-neon-glow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green-neon);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+.creator-full-card h3 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.creator-views {
+  font-size: 0.85rem;
+  color: var(--green-neon);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.partner-form-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  max-width: 680px;
+  margin: 40px auto 60px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.form-control {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.form-control:focus {
+  border-color: var(--green-neon);
+  box-shadow: 0 0 15px var(--green-neon-glow);
+}
+
+/* --------------------------------------------------------------------------
+   MEDIA QUERIES MOBILE (<= 768px e <= 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .creators-full-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+
+  .creator-full-card {
+    padding: 20px 16px;
+  }
+
+  .creator-big-avatar {
+    width: 68px;
+    height: 68px;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+
+  .partner-form-section {
+    padding: 24px 18px;
+    margin: 24px auto 40px;
+    border-radius: var(--radius-md);
+  }
+
+  .partner-form-section .btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+  }
+
+  .form-control {
+    min-height: 46px;
+    font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .creators-full-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-form-section {
+    padding: 20px 14px;
+  }
+}

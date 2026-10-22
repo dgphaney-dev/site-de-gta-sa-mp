@@ -1,0 +1,206 @@
+/* Rede Babilônia RPG - Estilos da Loja Oficial & Moedas */
+
+.store-category-nav {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin: 30px 0;
+}
+
+.store-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 50px;
+}
+
+.vip-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: all var(--transition-smooth);
+}
+
+.vip-card.featured {
+  border-color: var(--green-neon);
+  box-shadow: 0 0 25px rgba(0, 255, 102, 0.2);
+}
+
+.vip-card.featured::before {
+  content: 'MAIS POPULAR';
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: var(--green-gradient);
+  color: #000000;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.7rem;
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+}
+
+.vip-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-highlight);
+  box-shadow: var(--green-card-glow);
+}
+
+.vip-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.vip-price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--green-neon);
+  font-family: var(--font-heading);
+  margin-bottom: 20px;
+}
+
+.vip-price span {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.vip-features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 26px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.vip-features-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.vip-features-list svg {
+  color: var(--green-neon);
+  flex-shrink: 0;
+}
+
+/* Modal de Pagamento Pix */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-pix-content {
+  background: var(--bg-card);
+  border: 1px solid var(--border-highlight);
+  border-radius: var(--radius-lg);
+  max-width: 480px;
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
+}
+
+.qr-code-box {
+  width: 200px;
+  height: 200px;
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   MEDIA QUERIES MOBILE (<= 768px e <= 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .store-category-nav {
+    gap: 8px;
+    margin: 20px 0 28px;
+    justify-content: center;
+  }
+
+  .store-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 40px;
+  }
+
+  .vip-card {
+    padding: 24px 18px;
+  }
+
+  .vip-card .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .vip-price {
+    font-size: 1.75rem;
+  }
+
+  .modal-overlay {
+    padding: 12px;
+  }
+
+  .modal-pix-content {
+    padding: 22px 16px;
+    max-width: 94vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--radius-md);
+  }
+
+  .modal-pix-content .btn {
+    width: 100%;
+  }
+
+  .modal-pix-content input#pix-copia-cola {
+    min-width: 0;
+  }
+
+  .qr-code-box {
+    width: 170px;
+    height: 170px;
+    margin: 16px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .store-category-nav {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 4px 4px 10px;
+  }
+
+  .store-category-nav .filter-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .qr-code-box {
+    width: 150px;
+    height: 150px;
+  }
+}

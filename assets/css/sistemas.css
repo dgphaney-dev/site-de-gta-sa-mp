@@ -1,0 +1,135 @@
+/* Rede Babilônia RPG - Estilos da Página Sistemas & Recursos */
+
+.systems-filter-bar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.filter-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--green-neon-subtle);
+  border-color: var(--green-neon);
+  color: var(--green-neon);
+  box-shadow: 0 0 15px var(--green-neon-glow);
+}
+
+.systems-grid-detailed {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.system-detailed-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all var(--transition-smooth);
+}
+
+.system-detailed-card:hover {
+  border-color: var(--border-highlight);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 255, 102, 0.15);
+}
+
+.system-icon-header {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: rgba(0, 255, 102, 0.1);
+  border: 1px solid rgba(0, 255, 102, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green-neon);
+}
+
+.system-icon-header svg {
+  width: 26px;
+  height: 26px;
+}
+
+.system-category-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--green-neon);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.system-detailed-card h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.system-detailed-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   MEDIA QUERIES MOBILE (<= 768px e <= 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .systems-filter-bar {
+    gap: 8px;
+    margin: 20px 0 28px;
+    justify-content: center;
+  }
+
+  .filter-btn {
+    padding: 8px 16px;
+    font-size: 0.82rem;
+    min-height: 42px;
+  }
+
+  .systems-grid-detailed {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .system-detailed-card {
+    padding: 20px 16px;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .systems-filter-bar {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 4px 4px 12px;
+  }
+
+  .filter-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+}
