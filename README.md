@@ -1,183 +1,92 @@
-# 📖 Documentação do Projeto: Rede Babilônia RPG
+# 🌐 Rede Babilônia RPG - Plataforma Web Oficial
 
-![Logo Rede Babilônia RPG](/C:/Users/PICHAU/.gemini/antigravity/brain/be19e1c1-b798-4a29-a7e9-ee87d8922771/logo-babilonia.jpg)
+![Badge](https://img.shields.io/badge/Tecnologia-100%25%20Front--End-00ff66?style=for-the-badge)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Deploy](https://img.shields.io/badge/Deploy-GitHub%20Pages%20Ready-success?style=for-the-badge)
 
----
+Plataforma web moderna, responsiva e de alta performance criada exclusivamente para a **Rede Babilônia RPG** (GTA SA:MP Multiplataforma Android & PC).
 
-## 1. Visão Geral do Projeto
-
-A **Rede Babilônia RPG** é uma plataforma web completa voltada para um servidor de GTA SA:MP (San Andreas Multiplayer) com suporte multiplataforma (Android e PC).
-
-O projeto é composto por **duas soluções integradas em um único ecossistema web**:
-1. **Landing Page Institucional (Pública)**: Focada em conversão, apresentação dos diferenciais do servidor, downloads multiplataforma (Google Play / APK / PC) e divulgação da comunidade.
-2. **UCP - User Control Panel (Painel do Jogador - Autenticado)**: Painel interativo mobile-first para o jogador gerenciar sua conta, visualizar estatísticas em tempo real, acompanhar patrimônio, interagir na rede social in-game e comprar itens/VIPs na loja integrada.
-
-> [!NOTE]
-> **Divisão de Responsabilidades**: O desenvolvimento do servidor SA:MP (gamemode / pawn) é independente. O escopo deste projeto abrange 100% da **solução web (frontend, backend, design system e integrações de API/banco de dados)**.
+> 💡 **Projeto 100% Front-End Estático**: Não requer servidor backend (Node.js, PHP, Python) nem banco de dados (MySQL, MongoDB). Todo o ecossistema roda diretamente no navegador do usuário com velocidade instantânea, máxima segurança e custo zero de infraestrutura.
 
 ---
 
-## 2. Identidade Visual & UI/UX
+## 🎮 Diferenciais e Recursos do Front-End
 
-A identidade visual foi definida a partir da arte oficial da **Rede Babilônia RPG**, adotando uma estética **Gamer Dark & Neon Emerald**, com alto contraste e elegância.
-
-### Paleta de Cores Oficial
-
-| Aplicação | Cor Hex | Descrição |
-| :--- | :--- | :--- |
-| **Fundo Primário** | `#08090A` | Preto profundo para máxima imersão dark |
-| **Fundo de Cards/Superfícies** | `#111613` | Grafite escuro com leve nuance esmeralda |
-| **Bordas & Divisores** | `#1C2620` | Linhas sutis para separação de componentes |
-| **Verde Neon Primário** | `#00FF66` | Destaques principais, badges, status online e CTAs |
-| **Verde Esmeralda Secundário** | `#059669` / `#10B981` | Gradientes, botões secundários e barras de progresso |
-| **Texto de Destaque** | `#FFFFFF` | Branco puro para títulos e números |
-| **Texto Secundário** | `#9CA3AF` | Cinza claro para descrições e legendas |
-
-### Diretrizes de Experiência do Usuário (UX)
-* **Mobile-First Real**: Como mais de 70% do público de SA:MP atual joga no celular (Android), o site deve se comportar como um **aplicativo nativo (PWA)** no celular:
-  * **Bottom Navigation Bar** fixa com botão central flutuante destacado.
-  * Drawer lateral fluido para menus aprofundados.
-  * Toques rápidos, animações suaves e layouts em cards de fácil leitura em telas verticais.
-* **Elementos 3D "Pop-Out"**: Personagens e veículos estilizados vazando dos frames de celular e monitores, gerando profundidade e estética moderna.
+- **Arquitetura 100% Client-Side**: Páginas estáticas ultra-rápidas construídas com HTML5 semântico, CSS3 modular e JavaScript puro (Vanilla ES6+).
+- **Design System Gamer Dark & Verde Neon**:
+  - Paleta oficial: Fundo preto profundo (`#08090a`), superfícies esmeralda e destaques em verde neon (`#00ff66`).
+  - Tipografia: Títulos imponentes em *Rajdhani*, textos em *Inter* e títulos de impacto em arte *Street Graffiti*.
+  - Efeitos visuais modernos: Glassmorphism (`backdrop-filter`), iluminação atmosférica radial e sombras neon vibrantes.
+- **Cabeçalho Desktop Fixo com ScrollSpy Inteligente**:
+  - Menu central com alinhamento matemático exato (`HOME`, `SERVIDORES`, `SISTEMAS`, `COMO JOGAR`, `VIP`, `CONTATO`).
+  - Indicador animado em rabisco estilo grafite verde neon que se move dinamicamente conforme o usuário rola a página para cima ou para baixo.
+  - Rolagem suave com compensação de altura para nunca cobrir os títulos das seções.
+- **Experiência Mobile-First Real (Estilo App/PWA)**:
+  - **Bottom Navigation Bar** fixa com botão central flutuante destacado (**BAB**).
+  - Drawer deslizante fluido com todos os links institucionais.
+  - Ocultação de elementos redundantes em telas menores para priorizar o toque e a leitura vertical.
+- **Artes e Imagens Otimizadas em WebP**:
+  - Redução drástica no peso de carregamento mantendo qualidade 4K UHD.
+  - Carrossel de 5 sistemas exclusivos com painéis em quadrinhos estilo GTA.
+- **Zero Dependências Pesadas**:
+  - Sem bibliotecas externas pesadas ou frameworks complexos. Código limpo, sustentável e fácil de manter.
 
 ---
 
-## 3. Mapeamento de Módulos & Telas
+## 📂 Estrutura do Projeto
 
-### 🚀 Módulo 1: Landing Page Pública
-
-1. **Header & Navegação Superior**:
-   * Logotipo da Rede Babilônia RPG com efeito neon;
-   * Indicador rápido de servidores e botão de acesso à conta/painel.
-
-2. **Hero Section (Apresentação)**:
-   * Chamada de impacto (*"Venha fazer parte dessa família"*);
-   * Contador geral de jogadores online somando todos os servidores;
-   * Botão principal de ação rápida (*"Baixar Agora"*).
-
-3. **Status dos Servidores em Tempo Real**:
-   * Cards individuais para cada servidor (ex: Servidor #1, Servidor #2);
-   * Monitoramento dinâmico: IP, status (Online/Offline), contagem de players/slots (ex: `147/800`);
-   * Botão **One-Click Copy**: Copia o IP diretamente para a área de transferência do celular ou PC.
-
-4. **Carrossel Interativo de Sistemas (Features com Autoplay)**:
-   * Barra horizontal com ícones e barra de progresso temporal automática:
-     * 👥 **Monte sua Gangue**: Liderança de organizações, invasões e dominação de territórios.
-     * 📅 **Eventos Diários**: Missões e recompensas programadas diariamente.
-     * ⛰️ **Guerra do Morro**: Disputa armada por favelas e pontos estratégicos em horários marcados.
-     * 🛡️ **Torne-se um Policial**: Carreiras nas forças policiais, viaturas táticas e investigações.
-     * 🚚 **Empregos & Economia**: Carreira civil, entregas, comércios e compra de bens.
-
-5. **Área de Downloads Multiplataforma**:
-   * **Android**: Botão oficial da Google Play Store + Download de APK direto com render 3D em perspectiva.
-   * **PC**: Guia rápido em 3 passos (1. Baixar GTA SA $\rightarrow$ 2. Baixar SA:MP $\rightarrow$ 3. Conectar) + Modal de **Requisitos Mínimos** de sistema.
-
-6. **Área de Influenciadores & Comunidade**:
-   * Vitrine com criadores de conteúdo parceiros e contadores de visualizações/inscritos;
-   * Card de recrutamento com CTA *"Quero ser um influenciador"* (leva a formulário).
-
-7. **FAQ, Redes Sociais & Footer**:
-   * Acordeão de perguntas frequentes (Como instalar, como comprar moedas, regras);
-   * Links sociais oficiais (Discord, YouTube, Instagram, WhatsApp, TikTok);
-   * LGPD / Banner de cookies e rodapé institucional com termos e CNPJ.
-
----
-
-### 🛡️ Módulo 2: UCP - Painel do Jogador (Área Autenticada)
-
-1. **Login & Segurança**:
-   * Autenticação direta com o nickname e senha do jogador no banco de dados do servidor;
-   * Proteção contra ataques de força bruta (Rate limiting).
-
-2. **Dashboard do Personagem**:
-   * Card de Boas-vindas com render da skin atual do jogador;
-   * Nível atual, Respeitos (barra de progresso para o próximo nível);
-   * Tempo jogado total e tempo jogado hoje;
-   * Status VIP com contagem regressiva de dias restantes.
-
-3. **Gamificação Diária (Tickets do Dia)**:
-   * Barra de progresso acumulativa por horas conectadas;
-   * Contador regressivo para o reset diário;
-   * Sistema de resgate de recompensas in-game.
-
-4. **Central de Patrimônio & Inventário**:
-   * Visualização gráfica dos itens no inventário (`ex: 44/75 slots ocupados`);
-   * Lista de veículos próprios (modelo, placa, tunagem);
-   * Listagem de casas, empresas, portões e baús vinculados à conta.
-
-5. **Rede Social Integrada ("InstaBabilônia")**:
-   * Feed exclusivo para postagem de prints e momentos in-game tirados pelos jogadores;
-   * Sistema de curtidas e ranking semanal das fotos em alta.
-
-6. **Loja Integrada (E-Commerce com Pix Automático)**:
-   * Catálogo de Moedas (Coins/Babilônia Cash) e Pacotes VIP;
-   * Checkout transparente com **QR Code Pix Dinâmico e Copia-e-Cola**;
-   * Confirmação instantânea via webhook e entrega dos créditos direto no banco do jogo.
-
-7. **Atendimento & Seletivas**:
-   * Sistema de chamados/ouvidoria para denúncias e suporte;
-   * Formulários dinâmicos de inscrição para facções e administração.
-
----
-
-## 4. Arquitetura Técnica & Stack Recomendada
-
-```
-                                  ┌────────────────────────┐
-                                  │      CLIENTE WEB       │
-                                  │  (Next.js / Tailwind)  │
-                                  │  Mobile-First PWA      │
-                                  └───────────┬────────────┘
-                                              │ HTTPS / JSON
-                                              ▼
-                                  ┌────────────────────────┐
-                                  │      BACKEND / API     │
-                                  │   (Next.js API Routes) │
-                                  └─────┬────────────┬─────┘
-                                        │            │
-            ┌───────────────────────────┘            └───────────────────────────┐
-            │ UDP Query                                                          │ SQL / Webhooks
-            ▼                                                                    ▼
-┌────────────────────────┐                                           ┌────────────────────────┐
-│  SERVIDOR GTA SA:MP    │                                           │      BANCO DE DADOS    │
-│  (Status online/slots) │                                           │     MySQL do Servidor  │
-│  Porta: 7777           │                                           │  (Contas, VIPs, Bens)  │
-└────────────────────────┘                                           └───────────┬────────────┘
-                                                                                 │
-                                                                                 ▼
-                                                                     ┌────────────────────────┐
-                                                                     │   GATEWAY DE PAGAMENTO │
-                                                                     │   (Mercado Pago / Pix) │
-                                                                     └────────────────────────┘
+```text
+babilonia-rpg/
+├── index.html                 # Página principal (Landing page completa com Hero, Servidores e Carrossel)
+├── servidores.html            # Monitoramento detalhado de servidores, status e IPs
+├── sistemas.html              # Apresentação aprofundada dos sistemas exclusivos
+├── downloads.html             # Central de downloads Android (APK/Google Play) e PC com requisitos
+├── loja.html                  # Loja oficial com vitrine VIP e checkout Pix interativo
+├── regras.html                # Diretrizes e regras gerais da comunidade
+├── influenciadores.html       # Programa de criadores de conteúdo e parceiros
+├── faq.html                   # Perguntas frequentes com acordeão dinâmico
+├── suporte.html               # Central de ajuda, abertura de tickets e canal Discord
+├── preview.html               # Simulador de telas e resoluções
+├── assets/
+│   ├── css/                   # Folhas de estilo modulares
+│   │   ├── variables.css      # Variáveis de design (cores neon, fontes, espaçamentos)
+│   │   ├── base.css           # Reset global, tipografia e scrollbar personalizada
+│   │   ├── components.css     # Cabeçalho fixo, botões, cards, bottom nav e drawer
+│   │   ├── landing.css        # Estilos específicos da página inicial
+│   │   ├── scroll-reveal.css  # Animações de entrada ao rolar a página
+│   │   └── ... (CSS de páginas específicas)
+│   ├── js/                    # Módulos JavaScript puramente front-end
+│   │   ├── main.js            # Inicializador global, drawer e ScrollSpy do header
+│   │   ├── servers.js         # Renderização dinâmica e cópia de IP dos servidores
+│   │   ├── systems-tabs.js    # Carrossel interativo de abas com autoplay
+│   │   ├── loja.js            # Modal interativo de checkout Pix Copia-e-Cola
+│   │   ├── toast.js           # Notificações visuais flutuantes
+│   │   └── ... (Scripts modulares)
+│   └── images/                # Artes oficiais, logos 3D e imagens em WebP/PNG
+└── README.md                  # Documentação do projeto
 ```
 
-* **Frontend**: **Next.js 14+ (App Router)** com **TypeScript** e **Tailwind CSS**.
-* **Ícones & Efeitos**: **Lucide React** e **Framer Motion** para transições de slides e abas fluidas.
-* **Banco de Dados**: **MySQL** (conexão com as tabelas do gamemode através de um ORM leve com pool de conexões).
-* **Leitura de Status SA:MP**: Protocolo UDP via biblioteca `samp-query` com cache em memória de 15 segundos para não sobrecarregar o servidor.
-* **Pagamentos**: Integração Pix via **Mercado Pago** ou **Gerencianet/EFI Bank**.
+---
+
+## 🚀 Como Executar ou Hospedar
+
+Por ser um projeto **100% Front-End estático**, você pode usá-lo de qualquer uma das formas abaixo:
+
+### Opção 1: Abrir Diretamente no Computador
+Basta dar um duplo clique no arquivo `index.html` para abrir o site em qualquer navegador (Chrome, Edge, Firefox, Safari, Opera).
+
+### Opção 2: Hospedagem Gratuita no GitHub Pages
+1. No seu repositório no GitHub, acesse **Settings** > **Pages**.
+2. Em **Branch**, selecione `main` e a pasta `/ (root)`.
+3. Clique em **Save**. Em instantes, o GitHub fornecerá um link público seguro com HTTPS para o seu site!
+
+### Opção 3: Vercel / Netlify / Cloudflare Pages
+Basta conectar o repositório do GitHub nessas plataformas e clicar em **Deploy**. Não requer nenhum comando de build (Build Command vazio) e o diretório de saída é a raiz `./`.
 
 ---
 
-## 5. Roadmap Sugerido de Execução
+## 🛡️ Licença e Direitos
 
-1. **Fase 1: Fundação & Identidade**
-   - Configuração do projeto Next.js + Tailwind com a paleta oficial Verde & Preto;
-   - Implementação da estrutura base mobile-first com Bottom Nav e Drawer.
-
-2. **Fase 2: Landing Page Completa**
-   - Construção do Hero, Cards de Servidores e One-Click Copy;
-   * Carrossel de Sistemas com timer linear automático;
-   * Sessão de downloads (Android / PC com requisitos);
-   * Influenciadores, FAQ e Rodapé institucional.
-
-3. **Fase 3: Integração ao Vivo do Servidor**
-   - API de Query SA:MP (pega jogadores online e status direto do IP sem travar a página).
-
-4. **Fase 4: UCP & Autenticação**
-   - Tela de Login integrada ao hash de senha do SA:MP;
-   * Dashboard do Jogador, Inventário e Patrimônio.
-
-5. **Fase 5: Loja & Pagamento Automático**
-   - Vitrine de produtos VIP e Moedas;
-   - Geração de Pix Dinâmico e webhook de ativação instantânea.
+Projeto desenvolvido com exclusividade para a **Rede Babilônia RPG**. Todos os direitos reservados.
